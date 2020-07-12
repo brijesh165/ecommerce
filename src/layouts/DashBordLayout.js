@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { signOutUserStart } from './../store/Actions/user.actions.';
 
 import Header from './../components/Header/header';
-import VarticalNav from './../components/VerticalNav/VerticalNav';
+import VerticalNav from './../components/VerticalNav/VerticalNav';
 import Footer from './../components/Footer/Footer';
 
 const DashBoardLayout = props => {
@@ -17,18 +17,19 @@ const DashBoardLayout = props => {
     return (
         <div className="dashboardLayout">
             <Header {...props} />
+
             <div className="controlPanel">
                 <div className="sidebar">
-                    <VarticalNav>
-                        <li>
-                            <Link to="/dashboard">
-                                Home
-                            </Link>
-                        </li>
-                        <li>
-                            <span className="signOut" onClick={() => signOut()}>Sign Out</span>
-                        </li>
-                    </VarticalNav>
+                    <VerticalNav>
+                        <ul>
+                            <li>
+                                <Link to="/dashboard">Home</Link>
+                            </li>
+                            <li>
+                                <span className="signOut" onClick={() => signOut()}>Sign Out</span>
+                            </li>
+                        </ul>
+                    </VerticalNav>
                 </div>
                 <div className="content">
                     {props.children}

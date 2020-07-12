@@ -125,7 +125,7 @@ const Admin = props => {
                         </tr>
                         <tr>
                             <td>
-                                <table className="results" border="0" cellSpacing="0" cellPadding="0">
+                                <table className="results" border="0" cellSpacing="4" cellPadding="0">
                                     <tbody>
                                         {products.map((product, index) => {
                                             const {
