@@ -25,7 +25,7 @@ const Admin = props => {
         dispatch(
             fetchProductsStart()
         );
-    });
+    }, [dispatch]);
 
     const toggleModal = () => setHideModal(!hideModal);
 
@@ -88,9 +88,9 @@ const Admin = props => {
 
                         <FormInput
                             label="name"
-                            type="url"
-                            value={productThumbnail}
-                            handleChange={e => setProductThumbnail(e.target.value)}
+                            type="text"
+                            value={productName}
+                            handleChange={e => setProductName(e.target.value)}
                         />
 
                         <FormInput
@@ -162,7 +162,7 @@ const Admin = props => {
                 </table>
             </div>
         </div>
-    )
+    );
 }
 
 export default Admin;
