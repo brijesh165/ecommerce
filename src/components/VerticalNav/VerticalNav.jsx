@@ -1,13 +1,14 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
-import userProfile from './../UserProfile/UserProfile';
-import './style.scss';
+import UserProfile from './../UserProfile/UserProfile';
+import './VerticalNav.scss';
 
 const mapState = ({ user }) => ({
     currentUser: user.currentUser
 })
 
 const VerticalNav = ({children}) => {
+    console.log(children);
     const { currentUser } = useSelector(mapState);
 
     const configUserProfile = {
@@ -15,8 +16,8 @@ const VerticalNav = ({children}) => {
     }
 
     return (
-        <div className="verticalNav">
-            <userProfile {...configUserProfile} />
+        <div className="vertcalNav">
+            <UserProfile {...configUserProfile} />
 
             <div className="menu">
                 {children}

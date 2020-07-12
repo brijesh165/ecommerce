@@ -34,7 +34,7 @@ const Header = (props) => {
                     {currentUser && (
                         <ul>
                             <li><Link to="/dashboard">Dashboard</Link></li>
-                            <li><Link><span onClick={() => signOut()}>Logout</span></Link></li>
+                            <li><Link to=""><span onClick={() => signOut()}>Logout</span></Link></li>
                         </ul>
                     )}
 
