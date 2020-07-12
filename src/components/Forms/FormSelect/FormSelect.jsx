@@ -26,3 +26,5 @@ const FormSelect = ({ options, defaultValue, handleChange, label, ...otherProps}
         </div>
     );
 }
+
+export default FormSelect;
