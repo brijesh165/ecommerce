@@ -25,7 +25,7 @@ const Admin = props => {
         dispatch(
             fetchProductsStart()
         );
-    }, [fetchProductsStart]);
+    });
 
     const toggleModal = () => setHideModal(!hideModal);
 
@@ -159,7 +159,6 @@ const Admin = props => {
                             </td>
                         </tr>
                     </tbody>
-
                 </table>
             </div>
         </div>

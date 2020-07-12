@@ -23,7 +23,7 @@ export const handleFetchProducts = () => {
             .then(snapshot => {
                 const productsArray = snapshot.docs.map(doc => {
                     return {
-                        ...docs.data(),
+                        ...doc.data(),
                         documentID: doc.id
                     }
                 });
