@@ -2,7 +2,7 @@ import { takeLatest, call, all, put } from 'redux-saga/effects';
 
 import { auth, handleUserProfile, GoogleProvider, getCurrentUser } from './../../Firebase/utils';
 import userTypes from './../Actions/user.types';
-import { signInSuccess, signOutUserSuccess, userError, resetPasswordSuccess } from './../Actions/user.actions.';
+import { signInSuccess, signOutUserSuccess, userError, resetPasswordSuccess } from './../Actions/user.actions';
 import { handleResetPasswordAPI } from './user.helpers';
 
 export function* getSnapshotFromUserAuth(user, additionalData={}) {

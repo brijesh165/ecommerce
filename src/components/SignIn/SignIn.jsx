@@ -7,7 +7,7 @@ import Button from '../Forms/Button/Button';
 import FormInput from '../Forms/FormInput/FormInput';
 import AuthWrapper from '../AuthWrapper/AuthWrapper';
 import {GoogleLoginButton} from 'react-social-login-buttons';
-import {emailSignInStart, googleSignInStart} from './../../store/Actions/user.actions.';
+import {emailSignInStart, googleSignInStart} from '../../store/Actions/user.actions';
 
 const mapState = ({user}) => ({
     currentUser: user.currentUser

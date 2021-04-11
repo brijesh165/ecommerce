@@ -6,7 +6,7 @@ import './EmailPassword.scss';
 import AuthWrapper from '../AuthWrapper/AuthWrapper';
 import FormInput from '../Forms/FormInput/FormInput';
 import Button from '../Forms/Button/Button';
-import { resetPasswordStart, resetUserState } from './../../store/Actions/user.actions.';
+import { resetPasswordStart, resetUserState } from '../../store/Actions/user.actions';
 
 const mapState = ({user}) => ({
     resetPasswordSuccess: user.resetPasswordSuccess,

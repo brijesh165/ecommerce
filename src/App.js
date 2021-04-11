@@ -23,9 +23,10 @@ import LoginPage from './Pages/LoginPage/LoginPage';
 import Recovery from './Pages/Recovery/Recovery';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import Admin from './Pages/Admin/Admin';
+import Search from './Pages/Search/SearchPage';
 
 // Actions
-import { checkUserSession } from './store/Actions/user.actions.';
+import { checkUserSession } from './store/Actions/user.actions';
 
 
 const App = props => {
@@ -43,6 +44,18 @@ const App = props => {
           <HomePageLayout>
             <HomePage />
           </HomePageLayout>
+        )} />
+
+        <Route exact path="/search" render={() => (
+          <MainLayout>
+            <Search />
+          </MainLayout>
+        )} />
+
+        <Route path="/search/:filtertype" render={() => (
+          <MainLayout>
+            <Search />
+          </MainLayout>
         )} />
 
         <Route path="/login"

@@ -6,7 +6,7 @@ import './header.scss';
 import Logo from '../../assets/logo.png';
 
 // Action
-import {signOutUserStart} from './../../store/Actions/user.actions.';
+import { signOutUserStart } from '../../store/Actions/user.actions';
 
 const mapState = ({ user }) => ({
     currentUser: user.currentUser
@@ -15,21 +15,32 @@ const mapState = ({ user }) => ({
 
 const Header = (props) => {
     const dispatch = useDispatch();
-    const {currentUser} = useSelector(mapState);
+    const { currentUser } = useSelector(mapState);
 
     const signOut = () => {
         dispatch(signOutUserStart());
     };
 
-    return(
+    return (
         <header className="header">
             <div className="wrap">
                 <div className="logo">
                     <Link to="/">
-                        <img src={Logo} alt="SimpleTut LOGO" />                    
+                        <img src={Logo} alt="SimpleTut LOGO" />
                     </Link>
                 </div>
 
+                <nav>
+                    <ul>
+                        <li>
+                            <Link to="/">Home</Link>
+                        </li>
+
+                        <li>
+                            <Link to="/search">Search</Link>
+                        </li>
+                    </ul>
+                </nav>
                 <div className="callToActions">
                     {currentUser && (
                         <ul>
@@ -39,13 +50,13 @@ const Header = (props) => {
                     )}
 
                     {!currentUser && (
-                    <ul>
-                        <li><Link to="/registration">Register</Link></li>
-                        <li><Link to="/login">Login</Link></li>
-                    </ul>
+                        <ul>
+                            <li><Link to="/registration">Register</Link></li>
+                            <li><Link to="/login">Login</Link></li>
+                        </ul>
                     )}
                 </div>
-            </div>               
+            </div>
         </header>
     );
 }

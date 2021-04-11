@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
-import { signOutUserStart } from './../store/Actions/user.actions.';
+import { signOutUserStart } from '../store/Actions/user.actions';
 
 import Header from './../components/Header/header';
 import VerticalNav from './../components/VerticalNav/VerticalNav';

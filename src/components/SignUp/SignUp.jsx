@@ -6,7 +6,7 @@ import './SignUp.scss';
 import FormInput from '../Forms/FormInput/FormInput';
 import Button from '../Forms/Button/Button';
 import AuthWrapper from '../AuthWrapper/AuthWrapper';
-import { signUpUserStart } from './../../store/Actions/user.actions.';
+import { signUpUserStart } from '../../store/Actions/user.actions';
 
 const mapState = ({user}) => ({
     currentUser: user.currentUser,
